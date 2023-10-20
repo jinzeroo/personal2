@@ -1,0 +1,175 @@
+/*	1. CSS Reset
+================================================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /*	2. Global
+  ================================================================================ */
+  body {
+    /*! font: 14px Arial; */
+    /*! color: #ccc; */
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  /*	3. Skills
+  ================================================================================ */
+  #skills {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 960px;
+  }
+  #skills li {
+    position: relative;
+    margin-bottom: 32px;
+    padding-left: 6px;
+  }
+  #skills li .bar-container,
+  #skills li .bar {
+    position: absolute;
+    left: 0;
+    height: 5px;
+    border-radius: 5px;
+    content: "";
+  }
+  #skills li .bar-container {
+    bottom: -8px;
+    width: 100%;
+    background-color: #333;
+    text-align: right;
+  }
+.ion{
+  width: 35px;
+  height: 35px;
+  content: "";
+  display: flex;
+  background-image: url(../img/html.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -55px;
+  position: absolute;
+  top: -15px;
+}
+.ion2{
+  width: 35px;
+  height: 35px;
+  content: "";
+  display: flex;
+  background-image: url(../img/css.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -55px;
+  position: absolute;
+  top: -15px;
+}
+.ion3{
+  width: 35px;
+  height: 35px;
+  content: "";
+  display: flex;
+  background-image: url(../img/js.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -55px;
+  position: absolute;
+  top: -15px;
+}
+.ion4{
+  width: 35px;
+  height: 35px;
+  content: "";
+  display: flex;
+  background-image: url(../img/ps.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -55px;
+  position: absolute;
+  top: -15px;
+}
+.ion5{
+  width: 35px;
+  height: 35px;
+  content: "";
+  display: flex;
+  background-image: url(../img/ai.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -55px;
+  position: absolute;
+  top: -15px;
+}
+.ion6{
+  width: 35px;
+  height: 35px;
+  content: "";
+  display: flex;
+  background-image: url(../img/id.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -55px;
+  position: absolute;
+  top: -15px;
+}
+.ion8{
+  width: 35px;
+  height: 35px;
+  content: "";
+  display: flex;
+  background-image: url(../img/pr.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -55px;
+  position: absolute;
+  top: -15px;
+}
+.ion9{
+  width: 35px;
+  height: 35px;
+  content: "";
+  display: flex;
+  background-image: url(../img/ae.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -55px;
+  position: absolute;
+  top: -15px;
+}
+.ion10{
+  width: 35px;
+  height: 35px;
+  content: "";
+  display: flex;
+  background-image: url(../img/vv.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -55px;
+  position: absolute;
+  top: -15px;
+}
+.ion11 {
+  width: 35px;
+  height: 35px;
+  content: "";
+  display: flex;
+  background-image: url(../img/ov.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: -55px;
+  position: absolute;
+  top: -15px;
+}
+  #skills li .bar-container .bar {
+    top: 0;
+  }
+  #skills li .bar-container .pct {
+    position: absolute;
+    top: -28px;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+  }

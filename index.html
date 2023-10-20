@@ -1,0 +1,768 @@
+<!DOCTYPE html> 
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jinzeroo.github.io/pf-1/">
+    <meta property="og:description" content="서진영 PORTFOLIO">
+    <meta property="og:keywords" content="웹디자인,웹퍼블리셔,디자인">
+    <meta property="og:title" content="서진영 PORTFOLIO">
+    <meta name="description" content="서진영 PORTFOLIO">
+    <meta name="keywords" content="웹디자인,웹퍼블리셔,디자인">
+    <meta name="og:image" content="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/1GRvY9WUu08"/>
+    <title>서진영 PORTFOLIO</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/common.css">
+     <!-- 구글폰트 -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&display=swap" rel="stylesheet">
+     <!-- js -->
+
+     <!-- 햄버거 -->
+
+
+     <link rel='stylesheet' href="hamburger/animate.css">
+     <link rel="stylesheet" href="css/hamburger.css">
+     <script src="hamburger/jquery.min.js"></script>
+     <script  src="hamburger/script.js"></script>
+
+     <link rel="stylesheet" href="menu/style.css">
+     <script src='menu/jquery.min.js'></script>
+     <script>
+         $(document).ready(function(){
+             //$(".gnb").clone().appendTo("#menu .main-nav");//
+             $(".Button").on("click",function(e){
+              $(this).parent().toggleClass("is-Open");
+            });
+         });
+     </script>
+     <!-- 스킬 -->
+     <link rel="stylesheet" href="skill/skill.css">
+     <script  src="skill/script.js"></script>
+     <script type="text/javascript" src="skill/skill.min.js"></script>
+     <!-- 포트폴리오 -->
+    <link rel="stylesheet" href="css/portfolio.css">
+    <script src="js/portfolio.js"></script>
+    <script src='portfolio/jquery.min.js'></script>
+
+    <!-- 디자인 -->
+    <link rel="stylesheet" href="css/Design.css">
+    <script  src="Design/script.js"></script>
+
+    <!-- 페이지 슬라이딩.사이트도트 -->
+    <link rel="stylesheet" href="css/timelinenav.css">
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src="js/smoothscroll.js"></script>
+
+   <!-- aos -->
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+      $(document).ready(function(){
+      AOS.init();
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        //1번코드 종료
+        var c1p;
+        var c2p;
+        var c3p;
+        //각 컨텐츠의 위치(위에서 떨어져있는)
+        //$("요소").offset().top : #area1요소의 위치(위에서부터의)값
+        c1p=$("#aboutme").offset().top; 
+        c2p=$("#skill").offset().top;
+        c3p=$("#Design").offset().top;
+        c4p=$("#portfolio").offset().top;
+        c5p=$("#contact").offset().top;
+
+
+        // 메뉴클릭시 해당컨텐츠로 페이지스크롤
+        $(".gnb > li:nth-child(1) > a").click(function(){
+          $("html,body").animate({scrollTop:c1p},2000);
+        });
+        $(".gnb > li:nth-child(2) > a").click(function(){
+          $("html,body").animate({scrollTop:c2p},2000);
+        });
+        $(".gnb > li:nth-child(3) > a").click(function(){
+          $("html,body").animate({scrollTop:c3p},2000);
+        });
+        $(".gnb > li:nth-child(4) > a").click(function(){
+          $("html,body").animate({scrollTop:c4p},2000);
+        });
+        $(".gnb > li:nth-child(5) > a").click(function(){
+          $("html,body").animate({scrollTop:c5p},2000);
+        });
+        //스크롤 이벤트
+        $(window).scroll(function(){
+          if($(window).scrollTop()>=c1p){
+            $("header > .container > nav > .gnb > li > a").addClass("white");
+            $(".ion7").addClass("ion7on");
+          }else{
+            $("header > .container > nav > .gnb > li > a").removeClass("white");
+            $(".ion7").removeClass("ion7on");
+          }
+          // if($(window).scrollTop()>=c2p-$(window).height()){
+          //   $("div#area2 h2").addClass("bigsize");
+          //   $("div#area2 h2").parent().siblings().children("h2").removeClass("bigsize");
+          // }
+          // if($(window).scrollTop()>=c3p-$(window).height()){
+          //   $("div#area3 h2").addClass("bigsize");
+          //   $("div#area3 h2").parent().siblings().children("h2").removeClass("bigsize");
+          // }
+          
+        });
+      });
+    </script>
+</head>
+<body>
+    <!-- 헤더와 메인 -->
+    <header class="active">
+      <div class="container">
+          <h1 class="on"><a href="#">Jinyoung</a></h1>
+          <nav>
+              <ul class="gnb clearfix">
+                  
+                  <li class="">
+                      <a href="#aboutme">ABOUT</a>
+                  </li>
+                  <li class="">
+                      <a href="#skill">SKILLS</a>
+                  </li>
+                  <li class="">
+                      <a href="#Design">PORTFOLIO</a>
+                  </li>
+                  <li class="">
+                      <a href="#portfolio">DESIGN</a>
+                  </li>
+                  <li class="">
+                      <a href="#contact">CONTACT</a>
+                  </li>
+              </ul>
+          </nav>
+      </div>
+      <!-- 햄버거 -->
+      <nav class="Offscreen Nav-List">
+        <a href="#" class="Button">
+          <i class="Menu-Bar Menu-Top"></i>
+          <i class="Menu-Bar Menu-Middle"></i>
+          <i class="Menu-Bar Menu-Bottom"></i>
+        </a>
+          <ul>
+            <a class="ion7"></a>
+            <li><a href="#aboutme">ABOUT</a></li>
+            <li><a href="#skill">SKILLS</a></li>
+            <li><a href="#Desig">PORTFOLIO</a></li>
+            <li><a href="#portfolio">DESIGN</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+    </header>
+    
+      <div id="home" class="content0">
+          <div class="container" data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine">
+              <h2 data-aos="fade-right">PORTFOLIO</h2>
+          </div>
+      </div>
+      <main></main>
+      <!-- 어바웃 -->
+      <section id="aboutme" class="content1 clearfix wow fadeIn animated">
+          <div class="content1-left">
+              <h2 data-aos="fade-right">About</h2>
+              <a href="" title="자기소개" target="_blank">
+                  <p class="img">더 알아보기</p>
+                  <p class="link">ME</p>
+              </a>
+              <div class="about_bg"></div>
+              </div>
+              <div class="content1-right">
+              <div class="profile">
+                  <h2 class="sr-only">프로필</h2>
+                  <ul class="clearfix">
+                    <div class="about_me">
+                      <h3>서진영👽</h3>
+                    </div>
+                      <li>
+                        1998 09 09<br>
+                        2017-2021 극동대학교 디자인 학과 졸업
+                        <br>
+                        <br>
+                          안녕하세요! 디자이너 서진영입니다.😃<br>
+                          사람들의 오래 기억에 남고 신뢰도 높은 디자인을 만드는 것이 목표입니다.<br>
+                          디자인, 일러스트 창작활동의 관심이 많으며 꾸준히 공부중입니다.<br>
+                          디자이너는 이용자로부터 사용자 경험, 편의성을 제공하며 <br>가치있는 브랜드로 성장시키는 것이라 생각합니다.<br>
+                          멈추지 않고 꾸준히 발전하고 성장하는 디자이너가 되겠습니다! 감사합니다.👊
+                      </li>
+                  </ul>
+              </div>
+              <div class="tag">
+                  <h2 class="sr-only">키워드</h2>
+                  <ul class="clearfix">
+                      <li>
+                          <a href="on" title="">#디자인</a>
+                      </li>
+                      <li>
+                          <a href="3" title="">#일러스트</a>
+                      </li>
+                      <li>
+                          <a href="4" title="">#포토샵</a>
+                      </li>
+                      <li>
+                          <a href="link" title="">#웹디자이너</a>
+                      </li>
+                      <li>
+                          <a href="5" title="">#웹퍼블리셔</a>
+                      </li>
+                      <li>
+                          <a href="#" title="">#그림</a>
+                      </li>
+                      <li>
+                          <a href="3" title="">#꾸준함</a>
+                      </li>
+                      <li>
+                          <a href="4" title="">#기획력</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      </section>
+      <!-- 스킬 -->
+      <section id="skill" class="content2 wow fadeIn animated">
+              <h2>skill</h2>
+              <ol class="skill clearfix">
+              <ul id="skills">	
+                  <li>
+                      HTML
+                      <div class="bar-container">
+                        <a class="ion" data-aos="flip-left"></a>
+                          <span class="bar" data-bar='{ "color": "#fe5622" }'>
+                              <span class="pct">65%</span>
+                          </span>
+                      </div>
+                  </li>
+                  <li>
+                      CSS
+                      <div class="bar-container">
+                        <a class="ion2" data-aos="flip-left"></a>
+                          <span class="bar" data-bar='{ "color": "#3397fe", "delay": 600 }'>
+                              <span class="pct">60%</span>
+                          </span>
+                      </div>
+                  </li>
+                  <li>
+                    JavaScript
+                    <div class="bar-container">
+                      <a class="ion3" data-aos="flip-left"></a>
+                        <span class="bar" data-bar='{ "color": "#FFBB00", "delay": 600 }'>
+                            <span class="pct">50%</span>
+                        </span>
+                    </div>
+                </li>
+                  <li>
+                    Photoshop
+                      <div class="bar-container">
+                        <a class="ion4" data-aos="flip-left"></a>
+                          <span class="bar" data-bar='{ "color": "#0054FF", "delay": 1200 }'>
+                              <span class="pct">90%</span>
+                          </span>
+                      </div>
+                  </li>
+                  <li>
+                    illustration
+                      <div class="bar-container">
+                        <a class="ion5" data-aos="flip-left"></a>
+                          <span class="bar" data-bar='{ "color": "#fb9700", "delay": 1800 }'>
+                              <span class="pct">85%</span>
+                          </span>
+                      </div>
+                  </li>
+                  <li>
+                    In Design
+                      <div class="bar-container">
+                        <a class="ion6" data-aos="flip-left"></a>
+                          <span class="bar" data-bar='{ "color": "#F361A6", "delay": 1800 }'>
+                              <span class="pct">80%</span>
+                          </span>
+                      </div>
+                  </li>
+                  <li>
+                    Premiere Pro
+                      <div class="bar-container">
+                        <a class="ion8" data-aos="flip-left"></a>
+                          <span class="bar" data-bar='{ "color": "#9898fd", "delay": 1800 }'>
+                              <span class="pct">60%</span>
+                          </span>
+                      </div>
+                  </li>
+                  <li>
+                    After Effects
+                      <div class="bar-container">
+                        <a class="ion9" data-aos="flip-left"></a>
+                          <span class="bar" data-bar='{ "color": "#A566FF", "delay": 1800 }'>
+                              <span class="pct">60%</span>
+                          </span>
+                      </div>
+                  </li>
+                  <li>
+                    Visual Studio
+                      <div class="bar-container">
+                        <a class="ion10" data-aos="flip-left"></a>
+                          <span class="bar" data-bar='{ "color": "#1199ff", "delay": 1800 }'>
+                              <span class="pct">70%</span>
+                          </span>
+                      </div>
+                  </li>
+                  <li>
+                    카카오오븐
+                      <div class="bar-container">
+                        <a class="ion11" data-aos="flip-left"></a>
+                          <span class="bar" data-bar='{ "color": "#FFBB00", "delay": 1800 }'>
+                              <span class="pct">70%</span>
+                          </span>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+        </ol>
+      </section>
+      <section id="Design" class="content3">
+          <h2>portfolio</h2>
+          <main class="intro-section">
+              <div class="container">
+                <div class="grid">
+                  <div class="column-xs-12">
+                    <ul class="slider">
+                      <li class="slider-item active">
+                        <div class="grid vertical">
+                          <div class="column-xs-12 column-md-2 hide-mobile">
+                            <div class="intro">
+                              <a href="https://jinzeroo.github.io/pf-0/" target="_blank">
+                                <p class="link" data-aos="fade-right"
+                                data-aos-offset="300"
+                                data-aos-easing="ease-in-sine">CLICK HERE!</p>
+                                <h1 class="title"><span class="underline">Samsung Homepage</span></h1>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="column-xs-12 column-md-10">
+                            <div class="image-holder">
+                              <img src="img/mo1-1.png">
+                            </div>
+                            <div class="grid">
+                              <div class="column-xs-12 column-md-9">
+                                <div class="intro show-mobile">
+                                  <a href="https://jinzeroo.github.io/pf-0/" target="_blank">
+                                    <h1 class="title"><span class="underline">Samsung Homepage</span></h1>
+                                  </a>
+                                </div>
+                                <p class="description">(주) 삼성전자💻<br>
+
+                                  사용자 경험으로 누구나 쉽게 접근 할 수 있도록<br>
+                                  컨텐츠 구성과 제품이 더 눈에 띄는 웹사이트입니다.<br>
+                                  
+                                  참여도:(100%)/ 제작기간: 약3주 / 사용 툴: 포토샵, 일러스트, 비주얼 스튜디오 코드, 제이쿼리</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="slider-item">
+                        <div class="grid vertical">
+                          <div class="column-xs-12 column-md-2 hide-mobile">
+                            <div class="intro">
+                              <a href="https://jinzeroo.github.io/pf3-1/" target="_blank">
+                                <p class="link">CLICK HERE!</p>
+                                <h1 class="title"><span class="underline">KAI Homepage</span></h1>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="column-xs-12 column-md-10">
+                            <div class="image-holder">
+                              <img src="img/mo2.png">
+                            </div>
+                            <div class="grid">
+                              <div class="column-xs-12 column-md-9">
+                                <div class="intro show-mobile">
+                                  <a href="https://jinzeroo.github.io/pf3-1/" target="_blank">
+                                    <h1 class="title"><span class="underline">KAI Homepage</span></h1>
+                                  </a>
+                                </div>
+                                <p class="description">한국알콜산업 KAI🏭<br>
+
+                                  모던하고 심플한 이미지 중심으로 제작한<br>
+                                  반응형 웹사이트입니다.<br>
+                                  
+                                  참여도:(100%)/ 제작기간: 약2주 / 사용 툴: 포토샵, 일러스트, 비주얼 스튜디오 코드, 제이쿼리, Aos</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="slider-item">
+                        <div class="grid vertical">
+                          <div class="column-xs-12 column-md-2 hide-mobile">
+                            <div class="intro">
+                              <a href="https://jinzeroo.github.io/pf5-1/" target="_blank">
+                                <p class="link">CLICK HERE!</p>
+                                <h1 class="title"><span class="underline">Hitejinro Homepage</span></h1>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="column-xs-12 column-md-10">
+                            <div class="image-holder">
+                              <img src="img/mo3.png">
+                            </div>
+                            <div class="grid">
+                              <div class="column-xs-12 column-md-9">
+                                <div class="intro show-mobile">
+                                  <a href="https://jinzeroo.github.io/pf5-1/" target="_blank">
+                                    <h1 class="title"><span class="underline">hitejinro Homepage</span></h1>
+                                  </a>
+                                </div>
+                                <p class="description">하이트진로🍺<br>
+
+                                  기업의 제품을 초점으로 두어 상품을 강조하고<br>
+                                  누구나 이용하게 쉽게 구성을 변경하여 만든 웹 사이트 입니다.<br>
+                                  
+                                  참여도:(100%)/ 제작기간: 약2주 / 사용 툴: 포토샵, 일러스트, 비주얼 스튜디오 코드, 제이쿼리, Aos</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="slider-item">
+                        <div class="grid vertical">
+                          <div class="column-xs-12 column-md-2 hide-mobile">
+                            <div class="intro">
+                              <a href="https://jinzeroo.github.io/pf4/" target="_blank">
+                                <p class="link">CLICK HERE!</p>
+                                <h1 class="title"><span class="underline">J-Query</span></h1>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="column-xs-12 column-md-10">
+                            <div class="image-holder">
+                              <img src="img/mo4.png">
+                            </div>
+                            <div class="grid">
+                              <div class="column-xs-12 column-md-9">
+                                <div class="intro show-mobile">
+                                  <a href="https://jinzeroo.github.io/pf4/" target="_blank">
+                                    <h1 class="title"><span class="underline">J-Query</span></h1>
+                                  </a>
+                                </div>
+                                <p class="description">제이쿼리👩‍💻<br>
+
+                                  제이쿼리의 기초를 사용하여 <br>
+                                  기능들을 어떤식으로 활용했는지 보여주는 웹사이트 입니다.<br>
+                                  
+                                  참여도:(100%)/ 제작기간: 약2주 / 사용 툴: 비주얼 스튜디오 코드, 제이쿼리, Aos</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="slider-item">
+                        <div class="grid vertical">
+                          <div class="column-xs-12 column-md-2 hide-mobile">
+                            <div class="intro">
+                              <a href=" https://jinzeroo.github.io/pf8/" target="_blank">
+                                <p class="link">CLICK HERE!</p>
+                                <h1 class="title"><span class="underline">CGV Homepage</span></h1>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="column-xs-12 column-md-10">
+                            <div class="image-holder">
+                              <img src="img/mo5.png">
+                            </div>
+                            <div class="grid">
+                              <div class="column-xs-12 column-md-9">
+                                <div class="intro show-mobile">
+                                  <a href=" https://jinzeroo.github.io/pf8/" target="_blank">
+                                    <h1 class="title"><span class="underline">CGV Homepage</span></h1>
+                                  </a>
+                                </div>
+                                <p class="description">CGV🎬<br>
+
+                                  사용빈도가 높은 사이트로 컨텐츠 구성을<br>
+                                  심플하게 구성했으며 접근성을 높인 웹 사이트입니다.<br>
+                                  
+                                  참여도:(100%)/ 제작기간: 약1~2주 / 사용 툴: 포토샵, 비주얼 스튜디오 코드, 제이쿼리, Aos</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="slider-item">
+                        <div class="grid vertical">
+                          <div class="column-xs-12 column-md-2 hide-mobile">
+                            <div class="intro">
+                              <a href="https://jinzeroo.github.io/pf7/" target="_blank">
+                                <p class="link">CLICK HERE!</p>
+                                <h1 class="title"><span class="underline">NATIONAL MUSEUM OF KOREA</span></h1>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="column-xs-12 column-md-10">
+                            <div class="image-holder">
+                              <img src="img/mo6.png">
+                            </div>
+                            <div class="grid">
+                              <div class="column-xs-12 column-md-9">
+                                <div class="intro show-mobile">
+                                  <a href="https://jinzeroo.github.io/pf7/" target="_blank">
+                                    <h1 class="title"><span class="underline">NATIONAL MUSEUM OF KOREA</span></h1>
+                                  </a>
+                                </div>
+                                <p class="description">국립중앙 박물관🏛<br>
+
+                                  한국의 전통을 알리는 취지가 담겨있기에<br>
+                                  견고하면서 심플한 디자인으로 구성하며<br>
+                                  다양한 컨텐츠를 홍보할수 있도록 강조하여 만든 웹사이트입니다.<br>
+                                  
+                                  참여도:(100%)/ 제작기간: 약1~2주 / 사용 툴: 포토샵, 비주얼 스튜디오 코드, 제이쿼리, Aos</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="slider-item">
+                        <div class="grid vertical">
+                          <div class="column-xs-12 column-md-2 hide-mobile">
+                            <div class="intro">
+                              <a href="https://jinzeroo.github.io/pf6/" target="_blank">
+                                <p class="link">CLICK HERE!</p>
+                                <h1 class="title"><span class="underline">caffeBENE Homepage</span></h1>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="column-xs-12 column-md-10">
+                            <div class="image-holder">
+                              <img src="img/mo7.png">
+                            </div>
+                            <div class="grid">
+                              <div class="column-xs-12 column-md-9">
+                                <div class="intro show-mobile">
+                                  <a href="https://jinzeroo.github.io/pf6/" target="_blank">
+                                    <h1 class="title"><span class="underline">caffeBENE Homepage</span></h1>
+                                  </a>
+                                </div>
+                                <p class="description">카페베네☕<br>
+
+                                  심플하고 메뉴성을 강조하여 구성한<br>
+                                  웹사이트 입니다.<br>
+                                  
+                                  참여도:(100%)/ 제작기간: 약1주 / 사용 툴: 포토샵, 비주얼 스튜디오 코드, 제이쿼리, Aos</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  <div class="grid">
+                    <div class="column-xs-12">
+                      <div class="controls">
+                          <button class="previous">
+                            <span class="visually-hidden">Previous</span>
+                            <span class="icon arrow-left" aria-hidden="true"></span>
+                          </button>
+                          <button class="next">
+                            <span class="visually-hidden">Next</span>
+                            <span class="icon arrow-right" aria-hidden="true"></span>
+                          </button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </main>
+      </section>
+      <section id="portfolio" class="gallery">
+          <h2>Design</h2>
+          <div class="wrap row">
+              <ul>
+                  <a href="#" class="close"></a>
+                  <li>
+                      <a href="#item01">
+                          <img src="img/p1.jpg" alt="">
+                      </a>
+                  </li>
+      
+                  <li>
+                      <a href="#item02">
+                          <img src="img/p2.jpg" alt="">
+                      </a>
+                  </li>
+      
+                  <li>
+                      <a href="#item03">
+                          <img src="img/gui1.jpg" alt="">
+                      </a>
+                  </li>
+                  <li>
+                      <a class="image" href="#item04">
+                          <img src="img/u1.jpg" alt="">
+                      </a>
+                  </li>
+                  <li>
+                      <a class="image" href="#item05">
+                          <img src="img/k1.jpg" alt="">
+                      </a>
+                  </li>
+                  <li>
+                      <a class="image" href="#item06">
+                          <img src="img/d1.jpg" alt="">
+                      </a>
+                  </li>
+                  <li>
+                      <a class="image" href="#item07">
+                          <img src="img/j1.jpg" alt="">
+                      </a>
+                  </li>
+                  <li>
+                      <a class="image" href="#item08">
+                          <img src="img/w1.jpg" alt="">
+                      </a>
+                  </li>
+              </ul>
+          </div> <!-- / row -->
+      
+          <!-- Item 01 -->
+          <div id="item01" class="port">
+              <div class="row">
+                  <div class="description">
+                      <h1>Dogme Rang</h1>
+                      <p>마이크로 칩의 대체품 잃어버림 방지용 애견목줄 제품입니다.<br>
+                        참여도:(100%)/ 프로젝트 기간:5개월~1년(졸업작품)/ 사용 툴: 포토샵, 일러스트, 라이노</p>
+                  </div>
+                      <img src="img/p1-1.jpg" alt="">
+                  </div>
+              </div> <!-- / row -->
+          </div> <!-- / Item 02 -->
+
+          <!-- Item 02 -->
+          <div id="item02" class="port">
+              <div class="row">
+                  <div class="description">
+                      <h1>그 많은 색종이는 어디로 갔을까?</h1>
+                      <p>창의력과 창조력을 기르는 종이접기 책<br>
+                        동화와 종이접기 설명이 함께 있어 동화 속 인물을 직접 만들어 보고 스스로 동화의 이야기를
+                        만들며 아이들의 오감발들을 도와주는 동화책.<br>
+                        참여도:(100%)팀 작업, 삽화(90%)/ 프로젝트 기간:5개월~1년(졸업작품)/ 사용 툴: 포토샵, 일러스트, 클립스튜디오, 인디자인</p>
+                  </div>
+                  <img src="img/p3.jpg" alt="">
+              </div> <!-- / row -->
+          </div> <!-- / Item 02 -->
+
+          <!-- Item 03 -->
+          <div id="item03" class="port">
+              <div class="row">
+                  <div class="description">
+                      <h1>magi coco</h1>
+                      <p>당신의 생활을 위한, 건강한 삶, 안전한 냉장고 정리, 냉장고 전용 스마트 리모컨<br>
+                        냉장고를 열지 않고도 유통기한, 제품 종류와 갯수 등 알 수 있으며 냉장고의 위생을 책임지는 제품입니다.<br>
+                        참여도:(100%),/ 프로젝트 기간:1~2개월/ 사용 툴: 포토샵, 일러스트</p>
+                  </div>
+                  <img src="img/gui.jpg" alt="">
+              </div> <!-- / row -->
+          </div> <!-- / Item 03 -->
+
+          <!-- Item 04 -->
+          <div id="item04" class="port">
+            <div class="row">
+                <div class="description">
+                    <h1>UUU</h1>
+                    <p>잃어버림 방지용 우산 전용 케이스 <br>
+                      참여도:(100%)팀 / 프로젝트 기간:1~2개월/ 사용 툴: 포토샵, 일러스트</p>
+                </div>
+                <img src="img/u2.jpg" alt="">
+            </div> <!-- / row -->
+        </div> <!-- / Item 04 -->
+
+        <!-- Item 05 -->
+        <div id="item05" class="port">
+          <div class="row">
+              <div class="description">
+                  <h1>오대고궁</h1>
+                  <p>우리 나라의 오대고궁 전용 팜플렛 디자인<br>
+                    한국의 전통적인 문양과 분위기를 잡아 디자인<br>
+                    참여도:(100%)팀 / 프로젝트 기간:1~2개월/ 사용 툴: 포토샵, 일러스트</p>
+              </div>
+              <img src="img/k2.jpg" alt="">
+          </div> <!-- / row -->
+      </div> <!-- / Item 05 -->
+
+      <!-- Item 06 -->
+      <div id="item06" class="port">
+        <div class="row">
+            <div class="description">
+                <h1>댕댕이를 부탁해</h1>
+                <p>반려동물 위한 책/ 반려가족이 처음 생긴 초보주인들을 위한 책<br> 
+                  참여도:(100%)팀 작업, 삽화:(100%)/ 프로젝트 기간:1~2개월/ 사용 툴: 포토샵, 일러스트, 클립스튜디오</p>
+            </div>
+            <img src="img/d2.jpg" alt="">
+        </div> <!-- / row -->
+    </div> <!-- / Item 06 -->
+
+    <!-- Item 07 -->
+    <div id="item07" class="port">
+      <div class="row">
+          <div class="description">
+              <h1>행복한 둥지 찾아주기</h1>
+              <p>유기동물의 수를 확실한 입양을 통하여 줄이며, 반려동물을 보호 하고자 하는 캠페인
+                참여도:(100%) ,삽화:(100%)/ 프로젝트 기간:5개월~ 1년(졸업작품)/ 사용 툴: 포토샵, 일러스트, 클립스튜디오</p>
+          </div>
+          <img src="img/j2.jpg" alt="">
+      </div> <!-- / row -->
+  </div> <!-- / Item 07 -->
+
+  <!-- Item 08 -->
+  <div id="item08" class="port">
+    <div class="row">
+        <div class="description">
+            <h1>수선화에게</h1>
+            <p>
+              타이포 그라피& 책 표지 디자인(리디자인/ 원본)
+               참여도:(100%)/ 프로젝트 기간:1~약2주/ 사용 툴: 포토샵, 일러스트</p>
+        </div>
+        <img src="img/w2.jpg" alt="">
+    </div> <!-- / row -->
+</div> <!-- / Item 08 -->
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact_img" data-aos="fade-left"></div>
+        <div class="container">
+          <p>"오로지 디자인만 중요시 하지 않고"
+          <br>
+          <strong>사용자에게 편의성을 제공하며 가치있는 브랜드로 성장시키는</strong>
+          <br>
+          <strong> 디자이너, 서진영이 되겠습니다.</strong>
+          </p>
+          <p>
+          연락처 : sjy9809@naver.com 010 8181 2997
+          <br>
+          </p>
+          <div class="link clearfix">
+            <a class="fileOpen" href="https://drive.google.com/drive/folders/10DGE49keV3qH2Bjtq5Z2JEvB1lJX_tJC?usp=sharing" target="_blank">구글 드라이브</a>
+            <a class="git" href="https://github.com/jinzeroo" target="_blank">GIT 바로가기</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <address>
+        본 페이지는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.
+        <br>
+        © 2023 seo, jin young. All Rights Reserved.
+      </address>
+    </footer>
+</body>
+</html>
