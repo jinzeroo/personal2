@@ -19,6 +19,10 @@ header .container{
   justify-content: space-between;
   align-items: center;
   max-width: 1500px;
+  font-size: 0;
+  background-image: url(../img/jin4.png);
+  background-size: 165px;
+  background-repeat: no-repeat;
 }
 header.active{
   top: 0;
@@ -121,7 +125,7 @@ header > .container > nav > .gnb > li:hover > a, header > .container > nav > .gn
   top: 332px;
 }
 #home > .container > h2{
-  /*! position: absolute; */
+/*! position: absolute; */
   /*! left: 60px; */
   /*! bottom: 410px; */
   font-weight: 700;
@@ -129,11 +133,12 @@ header > .container > nav > .gnb > li:hover > a, header > .container > nav > .gn
   color: #fff;
   line-height: 1.1;
   letter-spacing: -3px;
-  background-image: url(../img/t1.png);
+  background-image: url(../img/jin66.png);
   font-size: 0;
   width: 700px;
-  height: 150px;
-  background-size: cover;
+  height: 500px;
+  background-size: 600px;
+  background-repeat: no-repeat;
 }
 /*어바웃*/
 #aboutme{
